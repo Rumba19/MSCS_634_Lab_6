@@ -12,10 +12,12 @@ These techniques uncover patterns such as frequently co-purchased grocery items,
 **Source**
 Instacart Market Basket Dataset (Kaggle).
 **Files used**
-|File|	|Purpose|
-|order_products__prior.csv|	|Item-level purchases for previous orders|
-|products.csv|	|Product metadata (product_id → product_name)|
-|orders.csv|	|Order context (order_id, user_id)|
+|| File                      | Purpose                                     |
+|--------------------------|---------------------------------------------|
+| order_products__prior.csv | Item-level purchases for previous orders     |
+| products.csv             | Product metadata (product_id → product_name) |
+| orders.csv               | Order context (order_id, user_id)            |
+
 We only need order-level and product-level data to build transaction baskets.
 3. **Key Concepts**
 **Transaction**
