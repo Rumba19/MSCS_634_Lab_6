@@ -13,7 +13,9 @@ These techniques uncover patterns such as frequently co-purchased grocery items,
 2. **Dataset Description**
 **Source**
 Instacart Market Basket Dataset (Kaggle).
-![dataset](/DataPreparation.Dataset.png)
+![dataset](DataPreparation/Dataset.png)
+
+![filteres](DataPreparation/Filtered.png)
 
 **Files used**
 
