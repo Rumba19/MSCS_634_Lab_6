@@ -13,9 +13,6 @@ These techniques uncover patterns such as frequently co-purchased grocery items,
 2. **Dataset Description**
 **Source**
 Instacart Market Basket Dataset (Kaggle).
-![dataset](DataPreparation/Dataset.png)
-
-![filteres](DataPreparation/Filtered.png)
 
 **Files used**
 
@@ -66,6 +63,18 @@ Support(X)=Total Transactions/Transactions containing X​
     - duplicate rows
 5. Convert to a basket matrix (order × product), with 1/0 indicating presence.
 Because Instacart is large, only the top N most frequent products (e.g., 50) are used to prevent RAM overload.
+![dataset](DataPreparation/Dataset.png)
+
+![filteres](DataPreparation/Filtered.png)
+
+![Frequency](DataPreparation/Frequency.png)
+
+![basket](DataPreparation/Basket1.png)
+
+![basket](DataPreparation/Basket2.png)
+
+![purchase](DataPreparation/Purchase.png)
+
 
 **Step 2 — Apriori Frequent Itemsets**
 - Apriori builds frequent itemsets bottom-up, searching:
