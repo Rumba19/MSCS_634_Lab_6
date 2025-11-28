@@ -75,7 +75,7 @@ Because Instacart is large, only the top N most frequent products (e.g., 50) are
 
 ![purchase](DataPreparation/Purchase.png)
 
-
+![heatmap](DataPreparation/Heatmap.png)
 **Step 2 — Apriori Frequent Itemsets**
 - Apriori builds frequent itemsets bottom-up, searching:
 1-item sets → 2-item sets → 3-item sets
@@ -92,7 +92,9 @@ Apriori returns frequent items and co-purchases such as:
 ```bash
 {bananas} , {bag of spinach}, {organic avocado}
 ```
+![apriori](Apriori/Apriori.png)
 
+![visualize](Apriori/AprioriVisualize.png)
 **Step 3 — FP-Growth Frequent Itemsets**
 FP-Growth builds a compressed FP-Tree to avoid candidate generation.
 
@@ -101,6 +103,9 @@ FP-Growth builds a compressed FP-Tree to avoid candidate generation.
 - Uses less memory
 - Handles large transactional datasets
 With identical support thresholds, FP-Growth typically returns nearly the same frequent itemsets as Apriori but in a fraction of the time.
+![FP](FpGrowth/Fpgrowth.png)
+
+![VisualizeFp](FpGrowth/FpgrowthVisualize.png)
 
 **Step 4 — Association Rules**
 Rules are created using mined itemsets.
@@ -108,7 +113,11 @@ Example rule:
 ```bash
 {organic strawberries} → {yogurt}
 ```
+![association](Association/Association.png)
 
+![apriorivsfp](Association/AprioriVsFPgrowth.png)
+
+![confidence](Association/Confidence.png)
 With metrics:
 - Support: how common the rule is
 - Confidence: how often Y occurs given X
@@ -118,6 +127,9 @@ Behavior Observed
 - Relaxed thresholds (e.g., confidence ≥ 0.35) → interpretable associations.
 
 **5. Comparative Analysis**
+![compariosn](Comparative/Comparison.png)
+
+![confidencsVslif](Comparative/ConfidenceVsLift.png)
 
 **Performance**
 Apriori is slower because it:
