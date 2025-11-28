@@ -1,4 +1,5 @@
 # Market Basket Analysis — Instacart Dataset
+
 1. **Overview**
 This project performs Market Basket Analysis (MBA) using transactional purchase data from the Instacart Online Grocery Shopping Dataset.
 The goal is to discover meaningful product associations using:
@@ -8,6 +9,7 @@ Two algorithms are implemented and compared:
 - Apriori
 - FP-Growth
 These techniques uncover patterns such as frequently co-purchased grocery items, which can support marketing, recommendation, and inventory decisions.
+
 2. **Dataset Description**
 **Source**
 Instacart Market Basket Dataset (Kaggle).
@@ -23,15 +25,19 @@ Instacart Market Basket Dataset (Kaggle).
 
 We only need order-level and product-level data to build transaction baskets.
 3. **Key Concepts**
+
 **Transaction**
 A single shopping basket (order) containing multiple items purchased together.
+
 **Itemset**
 A group of products:
 - 1-item set: {Bananas}
 - 2-item set: {Bananas, Milk}
+
 **Support**
 How often an itemset appears in all orders.
 Support(X)=Total Transactions/ Transactions containing X​
+
 **Confidence**
 How likely item Y is purchased when X is purchased.
  Support(X)=Total Transactions/Transactions containing X​
@@ -43,7 +49,9 @@ Support(X)=Total Transactions/Transactions containing X​
 - Lift > 1: Positive association
 - Lift = 1: Independent
 - Lift < 1: Negative association
+
 4. **Step-by-Step Methodology**
+
 **Step 1 — Data Preparation**
 1. Load transaction table (order_products__prior.csv).
 2. Merge with products.csv to obtain product names.
@@ -55,6 +63,7 @@ Support(X)=Total Transactions/Transactions containing X​
     - duplicate rows
 5. Convert to a basket matrix (order × product), with 1/0 indicating presence.
 Because Instacart is large, only the top N most frequent products (e.g., 50) are used to prevent RAM overload.
+
 **Step 2 — Apriori Frequent Itemsets**
 - Apriori builds frequent itemsets bottom-up, searching:
 1-item sets → 2-item sets → 3-item sets
@@ -74,6 +83,7 @@ Apriori returns frequent items and co-purchases such as:
 
 **Step 3 — FP-Growth Frequent Itemsets**
 FP-Growth builds a compressed FP-Tree to avoid candidate generation.
+
 **Advantages:**
 - Much faster
 - Uses less memory
@@ -96,6 +106,7 @@ Behavior Observed
 - Relaxed thresholds (e.g., confidence ≥ 0.35) → interpretable associations.
 
 **5. Comparative Analysis**
+
 **Performance**
 Apriori is slower because it:
 - repeatedly scans the dataset
