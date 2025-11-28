@@ -79,6 +79,7 @@ FP-Growth builds a compressed FP-Tree to avoid candidate generation.
 - Uses less memory
 - Handles large transactional datasets
 With identical support thresholds, FP-Growth typically returns nearly the same frequent itemsets as Apriori but in a fraction of the time.
+
 **Step 4 — Association Rules**
 Rules are created using mined itemsets.
 Example rule:
@@ -93,6 +94,7 @@ With metrics:
 Behavior Observed
 - Strict thresholds (e.g., confidence ≥ 0.6 + lift ≥ 1.1) → few or zero rules.
 - Relaxed thresholds (e.g., confidence ≥ 0.35) → interpretable associations.
+
 **5. Comparative Analysis**
 **Performance**
 Apriori is slower because it:
@@ -106,6 +108,7 @@ Output
 Both methods returned:
 - Nearly identical frequent itemsets
 - Similar high-support product pairs
+
 **Rule Generation**
 Apriori:
 - frequently returns zero rules at strict thresholds
@@ -113,6 +116,7 @@ Apriori:
 FP-Growth:
 - stable under lower thresholds
 - produces rules more reliably
+
 **6. Practical Takeaways**
 - FP-Growth is superior in real business applications.
 - Apriori is educational and useful only for small/clean datasets.
@@ -122,15 +126,18 @@ FP-Growth:
 - Retail baskets are very sparse.
     - Most orders contain 5–10 unique items
     - Only a small fraction of pairs co-occur often
+
 **7. Limitations & Challenges**
 - Full Instacart dataset is too large for Apriori in Colab.
 - Must sample transactions or increase support.
 - Must limit max itemset size to 2–3.
 - Association rules can be empty at strict thresholds.
 These issues are not “errors” — they are natural consequences of real retail data.
+
 **8. Example Interpretation (for lab write-up)**
 “The item pair ‘organic avocado’ + ‘bag of spinach’ appeared together in approximately 2–3% of transactions. Confidence metrics indicated that purchases of organic spinach increase the likelihood of purchasing avocados by a factor of 1.25 (lift > 1), suggesting complementary consumption.”
 You can adapt this to your actual output.
+
 **9. Conclusion**
 - FP-Growth should be used for analytics on large retail datasets.
 - Apriori struggles without sampling and strict constraints.
@@ -139,6 +146,7 @@ You can adapt this to your actual output.
     - shopping cart recommendations
     - cross-selling strategies
     - inventory placement
+    
 **Future Improvements**
 - Include department/aisle features.
 - Mine temporal sequences (next-purchase prediction).
