@@ -135,6 +135,7 @@ FP-Growth:
 These issues are not “errors” — they are natural consequences of real retail data.
 
 **8. Example Interpretation (for lab write-up)**
+
 “The item pair ‘organic avocado’ + ‘bag of spinach’ appeared together in approximately 2–3% of transactions. Confidence metrics indicated that purchases of organic spinach increase the likelihood of purchasing avocados by a factor of 1.25 (lift > 1), suggesting complementary consumption.”
 You can adapt this to your actual output.
 
@@ -146,7 +147,7 @@ You can adapt this to your actual output.
     - shopping cart recommendations
     - cross-selling strategies
     - inventory placement
-    
+
 **Future Improvements**
 - Include department/aisle features.
 - Mine temporal sequences (next-purchase prediction).
